@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 
   {% include head.html %}
@@ -45,6 +44,15 @@
         {% endif %}
 
       </header>
+
+      <!-- begin Summary -->
+      <section class="content-section">
+        <header class="section-header">
+          <h2>Summary</h2>
+        </header>
+
+      </section>
+
 
       {% if site.resume_section_experience %}
       <!-- begin Experience -->
@@ -96,8 +104,6 @@
       <!-- end Education -->
       {% endif %}
 
-
-      {% if site.resume_section_projects %}
       <!-- begin Projects -->
       <section class="content-section">
         <br>
@@ -117,49 +123,7 @@
 
       </section>
       <!-- end Projects -->
-      {% endif %}
 
-      {% if site.resume_section_associations %}
-      <!-- begin Organizations -->
-      <section class="content-section">
-        <br>
-        <header class="section-header">
-          <h2>Organizations</h2>
-        </header>
-
-        {% for association in site.data.associations %}
-        <div class="resume-item" itemscope itemprop="memberOf" itemtype="http://schema.org/Organization">
-          <h3 class="resume-item-title" itemprop="name">{% if association.url %}<a href="{{ association.url }}">{{ association.organization }}</a>{% else %}{{ association.organization }}{% endif %}</h3>
-          <h4 class="resume-item-details" itemprop="description">{{ association.role }} &nbsp;&bull;&nbsp; {{ association.year }}</h4>
-          <p class="resume-item-copy">{{ association.summary }}</p>
-        </div>
-        {% endfor %}
-
-      </section>
-      <!-- end Organizations -->
-      {% endif %}
-
-      {% if site.resume_section_recognition %}
-      <!-- begin Recognition -->
-      <section class="content-section">
-        <br>
-        <header class="section-header">
-          <h2>Awards</h2>
-        </header>
-
-        {% for recognition in site.data.recognitions %}
-        <div class="resume-item">
-          <h3 class="resume-item-title" itemprop="award">{{ recognition.award }}</h3>
-          <h4 class="resume-item-details">{{ recognition.organization }} &nbsp;&bull;&nbsp; {{ recognition.year }}</h4>
-          <p class="resume-item-copy">{{ recognition.summary }}</p>
-        </div>
-        {% endfor %}
-
-      </section>
-      <!-- end Recognition -->
-      {% endif %}
-
-      {% if site.resume_section_skills %}
       <!-- begin Skills -->
       <section class="content-section">
         <br>
@@ -175,7 +139,6 @@
 
       </section>
       <!-- end Skills -->
-      {% endif %}
 
       {% if site.resume_section_interests %}
       <!-- begin Interests -->
