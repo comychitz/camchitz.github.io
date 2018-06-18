@@ -1,4 +1,7 @@
 # Cameron Chitsaz's Public Resume
 
-*Forked from [jglovier/resume-template](https://github.com/jglovier/resume-template)*
+*Originally forked from [jglovier/resume-template](https://github.com/jglovier/resume-template)*
+
+## Running Site
+* `bundle exec jekyll serve`
 
